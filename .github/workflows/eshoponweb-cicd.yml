@@ -10,7 +10,7 @@ env:
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 9dddb91e-794e-4bcf-b422-f0526800e888
   WEBAPP-NAME: eshoponweb-webapp60005759
-  SKU: F1
+  SKU: S1
   #APP-SERVICE-PLAN: appserviceplan-eshoponweb-webapp60005759
 
 jobs:
