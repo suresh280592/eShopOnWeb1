@@ -10,6 +10,7 @@ env:
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 9dddb91e-794e-4bcf-b422-f0526800e888
   WEBAPP-NAME: eshoponweb-webapp60005759
+  SKU: F1
   #APP-SERVICE-PLAN: appserviceplan-eshoponweb-webapp60005759
 
 jobs:
@@ -83,7 +84,7 @@ jobs:
           subscriptionId: ${{ env.SUBSCRIPTION-ID }}
           resourceGroupName: ${{ env.RESOURCE-GROUP }}
           template: bicep-template/webapp.bicep
-          parameters: "webAppName=${{ env.WEBAPP-NAME }} appServicePlanName=${{ env.APP-SERVICE-PLAN }} location=${{ env.LOCATION }}"
+          parameters: "webAppName=${{ env.WEBAPP-NAME }} ku=${{ env.SKU }} location=${{ env.LOCATION }}"
           failOnStdErr: false
 
       # Publish website to Azure App Service (WebApp)
